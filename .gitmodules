@@ -1,0 +1,3 @@
+[submodule "docker-deploy-notifier"]
+	path = docker-deploy-notifier
+	url = https://git.gerardgascon.com/Geri/docker-deploy-notifier.git
