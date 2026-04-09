@@ -1,0 +1,20 @@
+services:
+  cadvisor:
+    container_name: cadvisor
+    image: gcr.io/cadvisor/cadvisor:latest
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /dev/disk:/dev/disk:ro
+    ports:
+      - "9345:8080"
+    devices:
+      - /dev/kmsg
+    restart: unless-stopped
+    labels:
+      glance.name: cAdvisor
+      glance.category: services
+      glance.icon: si:prometheus
+      glance.hide: false

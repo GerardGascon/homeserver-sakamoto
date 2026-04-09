@@ -8,3 +8,10 @@ services:
       - ./data:/app/pb_data
     environment:
       - TZ=${TZ:-Etc/UTC}
+    labels:
+      glance.name: UpSnap
+      glance.description: Wake on LAN
+      glance.url: https://upsnap.pi.gerardgascon.com
+      glance.category: services
+      glance.hide: false
+      glance.id: upsnap

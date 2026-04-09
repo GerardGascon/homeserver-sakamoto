@@ -11,6 +11,14 @@ services:
       - ./pihole:/etc/pihole
       - ./dnsmasq.d:/etc/dnsmasq.d
     restart: unless-stopped
+    labels:
+      glance.name: Pi-hole
+      glance.icon: si:pihole
+      glance.url: https://pihole.pi.gerardgascon.com/admin
+      glance.description: Ad-blocking
+      glance.category: services
+      glance.hide: false
+      glance.id: pihole
 
 networks:
   default:
