@@ -2,6 +2,9 @@ services:
   cadvisor:
     container_name: cadvisor
     image: gcr.io/cadvisor/cadvisor:latest
+    command:
+      - '-housekeeping_interval=15s'
+      - '-docker_only=true'
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro

@@ -11,7 +11,7 @@ services:
     labels:
       glance.name: UpSnap
       glance.description: Wake on LAN
-      glance.url: https://upsnap.pi.gerardgascon.com
+      glance.url: https://upsnap.sakamoto.gerardgascon.com
       glance.category: services
       glance.hide: false
       glance.id: upsnap

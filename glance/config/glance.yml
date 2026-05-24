@@ -1,12 +1,8 @@
 server:
   proxied: true
 
-branding:
-  hide-footer: true
-
 pages:
-  - name: Startpage
-    width: slim
+  - name: Sakamoto's Startpage
     center-vertically: true
     hide-desktop-navigation: true
     show-mobile-header: false
@@ -15,13 +11,26 @@ pages:
         widgets:
           - type: search
             search-engine: duckduckgo
-            bangs:
-              - title: YouTube
-                shortcut: "!yt"
-                url: https://www.youtube.com/results?search_query={QUERY}
 
           - type: docker-containers
             title: Services
             hide-by-default: true
             running-only: false
             category: services
+      
+      - size: small
+        widgets:
+          - type: bookmarks
+            title: Servers
+            groups:
+              - links:
+                - title: Kamaji
+                  url: https://kamaji.gerardgascon.com/
+                - title: Sakamoto
+                  url: https://sakamoto.gerardgascon.com/
+
+          - type: dns-stats
+            cache: 5s
+            service: pihole-v6
+            url: https://pihole.sakamoto.gerardgascon.com
+            password: ${PIHOLE_PASSWORD}
