@@ -6,8 +6,11 @@ services:
     network_mode: host
     volumes:
       - ./data:/app/pb_data
+    env_file:
+      - .env
     environment:
       - TZ=${TZ:-Etc/UTC}
+      - UPSNAP_USER_PASSWORD=${UPSNAP_USER_PASSWORD}
     labels:
       glance.name: UpSnap
       glance.description: Wake on LAN
