@@ -10,7 +10,34 @@ pages:
       - size: full
         widgets:
           - type: search
-            search-engine: duckduckgo
+            search-engine: https://noai.duckduckgo.com/?q={QUERY}&noai
+
+          - type: bookmarks
+            groups:
+              - title: General
+                links:
+                  - title: Proton Mail
+                    url: https://mail.proton.me/
+                  - title: GitHub
+                    url: https://github.com/
+                  - title: TrueNAS
+                    url: https://nas.kamaji.gerardgascon.com/
+                  - title: Game of the Day Submission
+                    url: ${GAME_OF_THE_DAY_FORM}
+              - title: Entertainment
+                links:
+                  - title: YouTube
+                    url: https://www.youtube.com/
+                  - title: Prime Video
+                    url: https://www.primevideo.com/
+              - title: Social
+                links:
+                  - title: Mastodon
+                    url: https://mastodon.gamedev.place/
+                  - title: Bluesky
+                    url: https://bsky.app/
+                  - title: Instagram
+                    url: https://www.instagram.com/
 
           - type: docker-containers
             title: Services
@@ -20,6 +47,14 @@ pages:
       
       - size: small
         widgets:
+          - type: custom-api
+            title: Sakamoto
+            frameless: true
+            template: |
+              <div class="widget-content" style="padding: 0; overflow: hidden;">
+                <img src="https://images.kamaji.gerardgascon.com/banners/sakamoto.webp">
+              </div>
+
           - type: bookmarks
             title: Servers
             groups:
@@ -28,6 +63,8 @@ pages:
                   url: https://kamaji.gerardgascon.com/
                 - title: Sakamoto
                   url: https://sakamoto.gerardgascon.com/
+                - title: Rosso
+                  url: https://rosso.gerardgascon.com/
 
           - type: dns-stats
             cache: 5s
